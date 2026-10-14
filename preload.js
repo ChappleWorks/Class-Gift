@@ -1,0 +1,1 @@
+const {contextBridge,ipcRenderer}=require('electron');contextBridge.exposeInMainWorld('classGift',{call:(action,arg)=>ipcRenderer.invoke('api',action,arg)});
